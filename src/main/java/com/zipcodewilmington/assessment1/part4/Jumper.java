@@ -8,7 +8,7 @@ public class Jumper {
     public int jumps(int j, int k) {
 
         double totalJumps = 0;
-        double counter = 1;
+        double counter = 2;
 
 
             if (k < j) {

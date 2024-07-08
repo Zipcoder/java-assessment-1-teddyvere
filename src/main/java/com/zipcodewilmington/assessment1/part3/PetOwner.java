@@ -18,12 +18,14 @@ public class PetOwner {
     public PetOwner(String name, Pet... pets) {
         this.age = age;
         this.name = name;
+        this.yongestPetAge = oldestPetAge;
 
     }
     /**
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
+
                 }
 
     /**
