@@ -11,7 +11,7 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return an array of strings, each element representative of a respective word in the sentence
      */
     public static String[] getWords(String sentence) {
-        return null;
+        return sentence.split(" ");
     }
 
 
@@ -21,7 +21,9 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        return null;
+        int i = sentence.indexOf(' ');
+        return sentence.substring(0, i);
+
     }
 
     /**
@@ -30,9 +32,23 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
-        return null;
-    }
+        String str = "Hello world, this is a test.";
 
+        // Find the index of the first space
+        int spaceIndex = str.indexOf(" ");
+
+        String newStr = null;
+        if (spaceIndex != -1) { // Check if a space was found
+            // Reverse the first word
+            String firstWord = str.substring(0, 5);
+            String reversedFirstWord = new StringBuilder(firstWord).reverse().toString();
+
+            // Construct the new string
+            newStr = reversedFirstWord + str.substring(spaceIndex);
+
+        }
+        return newStr;
+    }
     /**
      * @param sentence a string containing words delimited by spaces, representative of a sentence
      * @return the first word in the specified sentence, with identical contents in reverse order and the first character capitalized
@@ -50,7 +66,10 @@ public class StringUtils {
      * given a string and index, return an identical string excluding the character at the specified index
      */
     public static String removeCharacterAtIndex(String str, int index) {
-        return null;
+        StringBuilder sb = new StringBuilder(str);
+        sb.deleteCharAt(index);
+
+        return sb.toString();
     }
 
 }
