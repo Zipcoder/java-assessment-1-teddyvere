@@ -32,19 +32,22 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
-        String[] splitWords = sentence.split(" ");
-        StringBuilder builder = new StringBuilder();
+        String str = "Hello world, this is a test.";
 
-        for (String str : splitWords) {
-            if (str.length() < 5) {
-                builder.append(str);
-            } else {
-                builder.append(new StringBuilder(str).reverse().toString());
+        // Find the index of the first space
+        int spaceIndex = str.indexOf(" ");
 
-                builder.append(" ");
-            }
+        String newStr = null;
+        if (spaceIndex != -1) { // Check if a space was found
+            // Reverse the first word
+            String firstWord = str.substring(0, 5);
+            String reversedFirstWord = new StringBuilder(firstWord).reverse().toString();
+
+            // Construct the new string
+            newStr = reversedFirstWord + str.substring(spaceIndex);
+
         }
-        return builder.toString().trim();
+        return newStr;
     }
     /**
      * @param sentence a string containing words delimited by spaces, representative of a sentence

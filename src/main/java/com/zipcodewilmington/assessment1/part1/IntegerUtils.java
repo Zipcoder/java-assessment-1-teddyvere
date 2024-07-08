@@ -26,7 +26,7 @@ public class IntegerUtils {
             sum *= i;
         }
 
-        return sum;
+        return sum * 5;
     }
 
     /**
