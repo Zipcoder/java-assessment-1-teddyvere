@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part1;
 
+import java.util.Arrays;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -9,7 +11,11 @@ public class IntegerArrayUtils {
      * @return the sum of `intArray`
      */
     public static Integer getSum(Integer[] intArray) {
-        return null;
+        int sum = 0;
+        for(int i=0; i <= intArray.length-1; i++) {
+            sum += intArray[i];
+        }
+        return sum;
     }
 
     /**
@@ -17,7 +23,12 @@ public class IntegerArrayUtils {
      * @return the product of `intArray`
      */
     public static Integer getProduct(Integer[] intArray) {
-        return null;
+        int total = 1;
+
+        for(int i : intArray) {
+            total *= i;
+        }
+        return total;
     }
 
     /**
@@ -25,6 +36,12 @@ public class IntegerArrayUtils {
      * @return the sum of `intArray` divided by number of elements in `intArray`
      */
     public static Double getAverage(Integer[] intArray) {
-        return null;
+        double sum = 0.0;
+        double avg = 0.0;
+        for( int i = 0; i <= intArray.length -1; i++) {
+            sum += intArray[i];
+        }
+        avg = sum / intArray.length;
+        return avg;
     }
 }
